@@ -1,2 +1,2 @@
-# My-Portfolio
-This Repo is for all my portfolio projects
+# My-Projects
+This Repo is for all my projects
