@@ -1,4 +1,6 @@
-import React from 'react'
+import { BallCanvas } from "./canvas"
+import { technologies } from "../constant"
+import { SecttonWraper } from "../hoc"
 
 const Tech = () => {
   return (
@@ -6,4 +8,4 @@ const Tech = () => {
   )
 }
 
-export default Tech
+export default SecttonWraper(Tech, "tech")
