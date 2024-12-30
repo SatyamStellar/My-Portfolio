@@ -21,16 +21,20 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import dmarketing from "./company/dmarketing.jpg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+
+import brut from "./brut.png"
+import pass from "./pass.png"
+import todo from "./todoapp.png"
+import techg from "./techg.png"
 
 export {
+  dmarketing,
+  todo,
+  brut,
+  pass,
+  techg,
   logo,
   backend,
   creator,
@@ -52,11 +56,5 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+
 };
