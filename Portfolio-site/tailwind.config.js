@@ -5,15 +5,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#050816",
-        secondary: "#aaa6c3",
-        tertiary: "#151030",
-        "black-100": "#100d25",
-        "black-200": "#090325",
+        primary: "#1B262C",
+        secondary: "#45474B",
+        tertiary: "#3F4E4F",
+        "text-pri": "#B6CBBD",
+        "black-100": "#1E1E1E",
+        "black-200": "#4A4A4A",
         "white-100": "#f3f3f3",
       },
       boxShadow: {
-        card: "0px 35px 120px -15px #211e35",
+        card: "",
       },
       screens: {
         xs: "450px",

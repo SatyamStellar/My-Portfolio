@@ -23,17 +23,13 @@ const Contact = () => {
     setForm({ ...form, [name]: value })
   }
 
+
   const handleSumbit = (e) => {
     e.preventDefault();
     setLoading(true)
-
-    // template_og0s8zj
-    // service_oboydrg
-    // z9WX_mc_PHiN5TdiI
-
     emailjs.send(
-      'service_oboydrg',
-      'template_og0s8zj',
+      "service_oboydrg",
+      "template_og0s8zj",
       {
         from_name: form.name,
         to_name: 'Satyam',
@@ -41,7 +37,7 @@ const Contact = () => {
         to_email: 'satyam321tomar@gmail.com',
         message: form.message
       },
-      'z9WX_mc_PHiN5TdiI'
+      "z9WX_mc_PHiN5TdiI"
     )
       .then(() => {
         setLoading(false);
@@ -79,7 +75,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-tertiary py-4 px-6 placeholder:text-text-pri text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
@@ -89,7 +85,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-tertiary py-4 px-6 placeholder:text-text-pri text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
@@ -100,7 +96,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What's on your mind?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-tertiary py-4 px-6 placeholder:text-text-pri text-white rounded-lg outline-none border-none font-medium "
             />
           </label>
           <button

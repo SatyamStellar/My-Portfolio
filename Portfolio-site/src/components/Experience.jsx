@@ -12,7 +12,7 @@ import { textVariant } from "../utils/motion";
 const ExperienceCard = ({ experience }) =>
 (
   <VerticalTimelineElement
-    contentStyle={{ backgroundColor: '#1d1836', color: "#fff" }}
+    contentStyle={{ backgroundColor: '#45474B', color: "#fff" }}
     contentArrowStyle={{ borderRight: '7px solid #232632' }}
     date={experience.date}
     iconStyle={{ background: experience.iconBg }}
@@ -26,7 +26,7 @@ const ExperienceCard = ({ experience }) =>
   >
     <div>
       <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-      <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>{experience.company_name}</p>
+      <p className="text-text-pri text-[16px] font-semibold" style={{ margin: 0 }}>{experience.company_name}</p>
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <li key={`experience-point-${index}`}
@@ -44,7 +44,7 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>
+        <p className={`${styles.sectionSubText}`}>
           What I have so far
         </p>
         <h2 className={styles.sectionHeadText}>
