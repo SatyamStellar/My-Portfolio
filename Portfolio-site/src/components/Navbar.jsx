@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { useWindowScroll } from "react-use"
 
 import { styles } from "../styles";
 import { navLinks } from "../constant";
@@ -10,9 +12,43 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false)
 
 
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const [isNavVisible, setIsNavVisible] = useState(true)
+
+  const navContainerRef = useRef(null);
+
+
+  const { y: currentScrollY } = useWindowScroll();
+
+
+  useEffect(() => {
+    if (currentScrollY === 0) {
+      setIsNavVisible(true)
+      navContainerRef.current.classList.remove('floating-nav')
+    } else if (currentScrollY > lastScrollY) {
+      setIsNavVisible(false);
+      navContainerRef.current.classList.add('floating-nav')
+    } else if (currentScrollY < lastScrollY) {
+      setIsNavVisible(true);
+      navContainerRef.current.classList.add('floating-nav')
+    }
+
+    setLastScrollY(currentScrollY)
+  }, [currentScrollY, lastScrollY])
+
+
+  useEffect(() => {
+    gsap.to(navContainerRef.current, {
+      y: isNavVisible ? 0 : -100,
+      opacity: isNavVisible ? 1 : 0,
+      duration: 0.2
+    })
+  }, [isNavVisible])
+
+
   return (
-    <nav className={`${styles.paddingX} flex w-full items-center py-5 fixed top-0 z-20 bg-primary`}>
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+    <nav ref={navContainerRef} className={`${styles.paddingX} flex w-full items-center py-3 transition-all duration-700  border-none fixed z-20 top-4 rounded-2xl`}>
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto rounded-2xl">
         <Link
           to="/"
           className="flex items-center gap-2"
