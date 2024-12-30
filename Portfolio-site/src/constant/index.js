@@ -162,6 +162,7 @@ const projects = [
         ],
         image: todo,
         source_code_link: "https://github.com/SatyamStellar/My-To-do",
+        live_link: "https://my-todo-stellar.netlify.app/"
     },
     {
         name: "Tech.Gear",
@@ -183,6 +184,7 @@ const projects = [
         ],
         image: techg,
         source_code_link: "https://github.com/SatyamStellar/Tech.Gear",
+        live_link: "https://tech-gear11.netlify.app/"
     },
     {
         name: "Random Password Gen",
@@ -204,6 +206,7 @@ const projects = [
         ],
         image: pass,
         source_code_link: "https://github.com/SatyamStellar/Random-Password-Gen",
+        live_link: "https://randompasswordgen11.netlify.app/"
     }, {
         name: "BrutForce",
         description:
@@ -224,6 +227,7 @@ const projects = [
         ],
         image: brut,
         source_code_link: "https://github.com/SatyamStellar/Brute-Force",
+        live_link: "https://bruteforcev2.netlify.app/"
     },
 ];
 
