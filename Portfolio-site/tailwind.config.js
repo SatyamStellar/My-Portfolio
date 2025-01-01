@@ -6,12 +6,18 @@ export default {
     extend: {
       colors: {
         primary: "#1B262C",
-        secondary: "#45474B",
-        tertiary: "#3F4E4F",
-        "text-pri": "#B6CBBD",
-        "black-100": "#1E1E1E",
+        secondary: "#1d212a",
+        tertiary: "#1d212a",
+        sec: "#29a688",
+        "text-pri": "#000",
+        "black-100": "#30353b",
         "black-200": "#4A4A4A",
-        "white-100": "#f3f3f3",
+
+      },
+      fontFamily: {
+        'newtype': ['NewType', 'sans-serif'],
+        'moonrising': ['Moonrising', 'sans-serif'],
+        'guardian': ['Guardians', 'sans-serif'],
       },
       boxShadow: {
         card: "",
