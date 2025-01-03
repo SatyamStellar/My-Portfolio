@@ -227,5 +227,5 @@ body::-webkit-scrollbar {
 
 
 .floating-nav {
-  @apply bg-black bg-opacity-50 rounded-full border;
+  @apply backdrop-blur bg-black bg-opacity-15 rounded-full border;
 }
