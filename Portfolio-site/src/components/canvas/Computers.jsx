@@ -5,7 +5,7 @@ import { OrbitControls, Preload, SpotLight, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf"); // Ensure the path is correct relative to `public`
+  const computer = useGLTF("./robo1/scene.gltf"); // Ensure the path is correct relative to `public`
 
   return (
     <mesh>

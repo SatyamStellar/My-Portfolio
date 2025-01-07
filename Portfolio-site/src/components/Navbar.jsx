@@ -7,11 +7,11 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
 
-import { navLinks, projects } from "../constant";
+import { navLinks } from "../constant";
 import { logo, menu, close } from "../assets";
 
 
-const Navbar = ({ source_code_link }) => {
+const Navbar = () => {
 
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false)
@@ -52,7 +52,7 @@ const Navbar = ({ source_code_link }) => {
 
 
   return (
-    <nav ref={navContainerRef} className={`${styles.paddingX} flex w-full items-center py-3 transition-all duration-700  border-none fixed z-20 top-4 rounded-2xl`}>
+    <nav ref={navContainerRef} className={`${styles.paddingX} !px-32 flex w-full items-center py-3 transition-all duration-700  border-none fixed z-20 top-4 rounded-2xl`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto rounded-2xl">
         <Link
           to="/"
@@ -62,18 +62,18 @@ const Navbar = ({ source_code_link }) => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white font-newtype text-[20px] font-bold cursor-pointer flex">Satyam &nbsp; <span className="sm:block hidden font-newtype ">Stellar</span></p>
+
+          <p className="text-white font-consolaMono text-[20px] font-bold cursor-pointer flex">Stellar</p>
         </Link>
         <ul className="list-none items-center hidden sm:flex flex-row gap-16">
 
           {navLinks.map((links) => (
             <li
               key={links.id}
-              className="font-moonrising hover:text-sec hover:-translate-y-1 transition-all ease-in-out duration-100 text-[14px]  cursor-pointer"
+              className="  cursor-pointer"
               onClick={() => setActive(links.title)}
             >
-              <a className="font-moonrising" href={`#${links.id}`}>{links.title}</a>
+              <a className="font-monaco text-[24px]  transition-all ease-in-out duration-100 " href={`#${links.id}`}>{links.title}</a>
             </li>
           ))
 

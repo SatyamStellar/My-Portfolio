@@ -20,19 +20,30 @@ body::-webkit-scrollbar {
 }
 
 @font-face {
-  font-family: 'Guardians';
-  src: url('./assets/fonts/Guardians.ttf') format('truetype');
+  font-family: 'Elronmonospace';
+  src: url('./assets/fonts/Elronmonospace.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Moonrising';
-  src: url('./assets/fonts/Moonrising.ttf') format('truetype');
+  font-family: 'ConsolaMonoBold';
+  src: url('./assets/fonts/ConsolaMonoBold.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'NewType';
-  src: url('./assets/fonts/Newtype.ttf') format('truetype');
+  font-family: 'monaco';
+  src: url('./assets/fonts/monaco.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'SFMonoRegular';
+  src: url('./assets/fonts/SFMonoRegular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'LiberationMonoRegular';
+  src: url('./assets/fonts/LiberationMonoRegular.woff2') format('woff2');
+}
+
 
 .hash-span {
   margin-top: -100px;
@@ -227,5 +238,5 @@ body::-webkit-scrollbar {
 
 
 .floating-nav {
-  @apply backdrop-blur bg-black bg-opacity-15 rounded-full border;
+  @apply backdrop-blur-[2px] bg-black bg-opacity-20 rounded-full border;
 }

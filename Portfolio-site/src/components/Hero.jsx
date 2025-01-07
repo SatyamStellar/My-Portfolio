@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 import { BackgroundCircles } from "./decoration/Hero";
-
+import { TypeAnimation } from 'react-type-animation';
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas"
@@ -11,6 +11,7 @@ const Hero = () => {
   const parallaxRef = useRef(null)
   return (
     <section className="relative w-full h-screen mx-auto overflow-hidden" ref={parallaxRef}>
+
       <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-sec" />
@@ -21,6 +22,26 @@ const Hero = () => {
           <p className={`${styles.heroSubText} mt-2 text-black`}>I'm a creative <br className="sm:block hidden" /> frontend developer</p>
         </div>
       </div>
+      <ScrollParallax isAbsolutelyPositioned >
+        <div className="absolute top-1/3 right-0  pr-5 backdrop-blur-sm bg-black bg-opacity-10 p-3 rounded-l-xl">
+          <TypeAnimation className="font-monaco text-lg"
+            sequence={[
+
+              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              'We produce food for Hamsters',
+              1000,
+              'You suck at programming',
+              1000,
+              'But you can improve yourself',
+              1000
+            ]}
+            wrapper="span"
+            speed={40}
+            deletionSpeed={55}
+            repeat={Infinity}
+          />
+        </div>
+      </ScrollParallax>
       <ComputersCanvas />
       <div className="absolute xs:bottom-8 bottom-4 w-full flex justify-center items-center">
         <a href="#about">

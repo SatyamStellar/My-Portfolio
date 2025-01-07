@@ -41,6 +41,10 @@ export const navLinks = [
         id: "contact",
         title: "Contact",
     },
+    {
+        id: "tech",
+        title: "Tech"
+    }
 ];
 
 // Services offered with relevant icons

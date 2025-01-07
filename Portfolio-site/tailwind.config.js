@@ -15,9 +15,11 @@ export default {
 
       },
       fontFamily: {
-        'newtype': ['NewType', 'sans-serif'],
-        'moonrising': ['Moonrising', 'sans-serif'],
-        'guardian': ['Guardians', 'sans-serif'],
+        'elronmono': ['Elronmonospace', 'sans-serif'],
+        'consolaMono': ['ConsolaMonoBold', 'sans-serif'],
+        'monaco': ['monaco', 'sans-serif'],
+        'sfMono': ['SFMonoRegular', 'sans-serif'],
+        'liberationMono': ['LiberationMonoRegular', 'sans-serif'],
       },
       boxShadow: {
         card: "",
