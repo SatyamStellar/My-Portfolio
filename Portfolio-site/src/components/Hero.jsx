@@ -12,16 +12,17 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto overflow-hidden" ref={parallaxRef}>
 
-      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
+      <div className={`${styles.paddingX} absolute inset-0 xl:items-center items-start xl:top-0 top-[120px] max-w-7xl mx-auto flex flex-row  gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-sec" />
           <div className="w-1 sm:h-80 h-40 black-gradient-back" />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadSecText}`}>Hi I{"'"}m<span className={`${styles.heroHeadText}`}>Satyam</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-black`}>I'm a creative <br className="sm:block hidden" /> frontend developer</p>
+          <h1 className={`font-sfMono text-white  font-bold lg:text-[50px] sm:text-[30px] xs:text-[20px] text-[20px] mt-2 tracking-wide`}>Satyam Stellar</h1>
+          <p className={`w-[40%] font-liberationMono text-white uppercase lg:text-[16px] sm:text-[12px] xs:text-[10px] text-[8px] ml-4 mt-2 `}>I'm adedicated frontend developer with a passion for creating visually appealing, modern, and highly responsive user interfaces that deliver seamless experiences. </p>
         </div>
       </div>
+
       <ScrollParallax isAbsolutelyPositioned >
         <div className="absolute top-1/3 right-0  pr-5 backdrop-blur-sm bg-black bg-opacity-10 p-3 rounded-l-xl">
           <TypeAnimation className="font-monaco text-lg"
@@ -41,6 +42,7 @@ const Hero = () => {
             repeat={Infinity}
           />
         </div>
+
       </ScrollParallax>
       <ComputersCanvas />
       <div className="absolute xs:bottom-8 bottom-4 w-full flex justify-center items-center">
@@ -61,7 +63,7 @@ const Hero = () => {
         </a>
       </div>
       <BackgroundCircles />
-    </section>
+    </section >
   )
 }
 

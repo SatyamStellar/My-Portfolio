@@ -52,7 +52,7 @@ const Navbar = () => {
 
 
   return (
-    <nav ref={navContainerRef} className={`${styles.paddingX} !px-32 flex w-full items-center py-3 transition-all duration-700  border-none fixed z-20 top-4 rounded-2xl`}>
+    <nav ref={navContainerRef} className={`${styles.paddingX}  flex w-full items-center py-3 transition-all duration-700  border-none fixed z-20 top-4 rounded-2xl`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto rounded-2xl">
         <Link
           to="/"

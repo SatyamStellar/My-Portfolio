@@ -30,7 +30,7 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true)
     emailjs.send(
-      service,
+
       template,
       {
         from_name: form.name,
