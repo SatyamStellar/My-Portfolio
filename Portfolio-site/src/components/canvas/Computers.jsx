@@ -9,8 +9,8 @@ const Computers = ({ isMobile, isXlMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={6} groundColor="black" />
-      <pointLight intensity={5} />
+      <hemisphereLight intensity={isMobile ? 6 : 7} groundColor="black" />
+      <pointLight intensity={isMobile ? 2 : 5} />
       <spotLight
         position={[-20, 50, 10]}
         angle={isMobile ? 0.12 : 0.5}
@@ -21,8 +21,8 @@ const Computers = ({ isMobile, isXlMobile }) => {
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.03 : isXlMobile ? 0.03 : 0.04}
-        position={isMobile ? [0, -1, 0] : isXlMobile ? [0, 0, 0] : [0, 0, 0]}
+        scale={isMobile ? 0.02 : isXlMobile ? 0.03 : 0.04}
+        position={isMobile ? [0, -0.5, 0] : isXlMobile ? [0, 0, 0] : [0, 0, 0]}
         rotation={[0.01, 0.2, 0.1]}
       />
     </mesh>
@@ -36,7 +36,7 @@ const ComputersCanvas = () => {
   useEffect(() => {
     const handleMediaQuery = () => {
       setIsMobile(window.matchMedia("(max-width: 780px)").matches);
-      setIsXlMobile(window.matchMedia("(max-width: 1028px)").matches);
+      setIsXlMobile(window.matchMedia("(max-width: 1024px)").matches);
     };
 
     handleMediaQuery(); // Initial check
